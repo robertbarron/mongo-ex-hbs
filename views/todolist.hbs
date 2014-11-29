@@ -1,0 +1,29 @@
+
+<html>
+	<head>
+	<title>{{title}}</title>
+		<link rel="stylesheet" href="/stylesheets/style.css">
+		<script src ="/javascripts/jquery.js"></script>
+		<script src ="/javascripts/behavior.js"></script>
+	</head>
+	<body>
+		<div id="todolist">
+			<div class="todo-title">Todo List</div>
+			<ul class="list">
+				{{#each todolist}}
+					{{#if done}}
+						<li data-index="{{@index}}" class="task done" data-status="true">
+							<div class="container">
+								<div class="task-desc">{{task}}</div>
+					{{else}}
+						<li data-index="{{@index}}" class="task" data-status="false">
+							<div class="container">
+								<div class="task-desc">{{task}}</div>
+					{{/if}}
+						</div>
+					</li>
+				{{/each}}
+			</ul>
+		</div>
+	</body>
+</html>
