@@ -205,33 +205,45 @@ QUnit.asyncTest("Checking todolist functional behavior", function (assert) {
 	// //Click to down a position on a task
 	// $('#todolist').on('click', '.ico-down', function (e) {
 	// 	var clickedEl = $(this),
-	// 		taskId = clickedEl.closest('.task').data('id');
+	// 		taskId = clickedEl.closest('.task').data('id'),
+	// 		list = todolist.getList();
+
+	// 	flag = list[list.length-1].id;
 
 	// 	e.stopPropagation();
 	// 	todolist.downItem(taskId);
 	// });
 	// setTimeout(function() {
 	// 	$('#todolist .task:first .ico-down').trigger('click');
-	// 	var myList = todolist.getList();
-	// 	debugger;
-	// },1000);
-	// setTimeout(function () {
-	// 	var list = todolist.getList();
 	// },3000);
 
-	// // Click to up a position on a task
-	$('#todolist').on('click', '.ico-up', function (e) {
-		var clickedEl = $(this),
-			taskId = clickedEl.closest('.task').data('id');
+	// setTimeout(function () {
+	// 	var list = todolist.getList();
+	// 	QUnit.start();
+	// 	assert.notEqual(flag, list[0].id, 'Should be different');
+	// },10000);
 
-		e.stopPropagation();
-		todolist.upItem(taskId);
-	});
-	setTimeout(function() {
-		$('#todolist .task:last .ico-up').trigger('click');
-	},1000);
-	setTimeout(function () {
-		var list = todolist.getList();
-	},3000);
+	// // Click to up a position on a task
+	// var flag = -1;
+	// $('#todolist').on('click', '.ico-up', function (e) {
+	// 	var clickedEl = $(this),
+	// 		taskId = clickedEl.closest('.task').data('id'),
+	// 		list = todolist.getList();
+
+	// 	flag = list[list.length-1].id;
+		
+	// 	e.stopPropagation();
+	// 	todolist.upItem(taskId);
+	// });
+
+	// setTimeout(function() {
+	// 	$('#todolist .task:last .ico-up').trigger('click');
+	// },3000);
+
+	// setTimeout(function () {
+	// 	var list = todolist.getList();
+	// 	QUnit.start();
+	// 	assert.notEqual(flag, list[list.length-1].id, 'Should be different');
+	// },10000);
 
 });
