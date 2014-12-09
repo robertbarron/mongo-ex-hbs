@@ -3,8 +3,7 @@
 	<head>
 	<title>{{title}}</title>
 		<link rel="stylesheet" href="/stylesheets/style.css">
-		<script src ="/javascripts/jquery.js"></script>
-		<script src ="/javascripts/behavior.js"></script>
+		<link rel="stylesheet" href="//code.jquery.com/qunit/qunit-1.15.0.css">
 	</head>
 	<body>
 		<div id="todolist">
@@ -25,5 +24,12 @@
 				{{/each}}
 			</ul>
 		</div>
+		<div id="qunit"></div>
+		<script src ="/javascripts/jquery.js"></script>
+		<script src ="/javascripts/models/todoModel.js"></script>
+		<script src ="/javascripts/controllers/todoController.js"></script>
+		<script src ="/javascripts/behavior.js"></script>
+		<script src="//code.jquery.com/qunit/qunit-1.15.0.js"></script>
+		<script src="/test/test.js"></script>
 	</body>
 </html>

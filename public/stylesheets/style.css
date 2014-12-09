@@ -15,19 +15,74 @@ a {
 	border-radius: 10px;
 	box-shadow: 1px 1px 11px #000;
 }
+.clear {
+	clear: both;
+}
 .todo-title {
 	background: #1E5799;
 	color: #fff;
 	padding: 10px 17px;
 	border-radius: 5px 5px 0 0;
 }
+.todo-title .title {
+	float: left;
+}
+.todo-title .todo-new {
+	float: right;
+	padding: 0px 5px;
+	cursor: pointer;
+	font-weight: 900;
+}
+.todo-title .todo-new:hover {
+	background: #ccc;
+	border-radius: 5px;
+}
 .task {
 	cursor: pointer;
+}
+.task .container .task-desc {
+	width: 72%;
+	float: left;
+	overflow: hidden;
+}
+
+.task .container .ico-up {
+	width: 7%;
+	color: #00F;
+	font-weight: 900;
+	float: left;
+	text-align:center;
+}
+.task .container .ico-down {
+	width: 7%;
+	color: #333;
+	font-weight: 900;
+	float: left;
+	text-align:center;
+}
+.task .container .ico-edit {
+	width: 7%;
+	color: #0f0;
+	font-weight: 900;
+	float: left;
+	text-align:center;
+}
+.task .container .ico-delete {
+	width: 7%;
+	color: #f00;
+	font-weight: 900;
+	float: right;
+	text-align:center;
+}
+.task .container .ico-up:hover, .task .container .ico-down:hover,
+.task .container .ico-delete:hover, .task .container .ico-edit:hover {
+	background: #ccc;
+	border-radius: 5px;
 }
 .task-desc {
 	font-color:#333;
 }
-.task.done {
+.task.true .task-desc {
 	text-decoration: line-through;
 	color: #aaa;
 }

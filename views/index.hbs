@@ -1,4 +1,26 @@
-<div id="main">
-	<title>{{title}}: Madafaka</title>
-	<h1>{{title}}</h1>
-</div>
+<html>
+	<head>
+	<title>{{title}}</title>
+		<link rel="stylesheet" href="/stylesheets/style.css">
+		<link rel="stylesheet" href="//code.jquery.com/qunit/qunit-1.15.0.css">
+	</head>
+	<body>
+		<div id="todolist">
+			<div class="todo-title">
+				<div class="title">Todo List</div>
+				<div class="todo-new">+</div>
+				<div class="clear"></div>
+			</div>
+			<ul class="list" id="list">
+			</ul>
+		</div>
+		<div id="qunit"></div>
+		<script src ="/vendors/jquery/jquery.js"></script>
+		<script src ="/javascripts/models/todoModel.js"></script>
+		<script src ="/javascripts/controllers/todoController.js"></script>
+		<script src ="/vendors/jpload/jpload.js"></script>
+		<script src ="/javascripts/behavior.js"></script>
+		<script src="//code.jquery.com/qunit/qunit-1.15.0.js"></script>
+		<script src="/test/test.js"></script>
+	</body>
+</html>
